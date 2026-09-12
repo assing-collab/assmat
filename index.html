@@ -13,7 +13,9 @@
 <meta property="og:description" content="Un accueil chaleureux, sécurisé et adapté au rythme de chaque enfant. Places disponibles du lundi au vendredi à Saint-Joseph.">
 <meta property="og:url" content="https://assistante-maternelle-saint-joseph.re/">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:image" content="https://assistante-maternelle-saint-joseph.re/images/og-audrey.jpg">
+<meta property="og:image" content="https://assistante-maternelle-saint-joseph.re/images/audrey-portrait.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%235E6E52'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' fill='%23FAF7F2' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,6 +85,16 @@
       "@type": "Question",
       "name": "Quels sont les tarifs ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Contactez-moi pour en savoir plus : les tarifs sont définis ensemble selon le nombre d'heures et les besoins de votre famille." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment fonctionne le contact avec les parents ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Communication régulière avec les familles, par téléphone ou WhatsApp, pour partager les moments clés de la journée de l'enfant." }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment sont organisées les activités ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Les activités sont adaptées à l'âge et au rythme de chaque enfant : jeux d'éveil, activités créatives et sensorielles, moments calmes, et sorties selon la météo." }
     }
   ],
   "url": "https://assistante-maternelle-saint-joseph.re/"
@@ -97,6 +109,7 @@
     --sable-2: #E4D8C4;
     --sauge: #7F9174;
     --sauge-dark: #5E6E52;
+    --sauge-darker: #46523D;
     --argile: #CC9484;
     --encre: #33302A;
     --encre-soft: #6B6357;
@@ -143,6 +156,20 @@
 
   :focus-visible{ outline: 3px solid var(--argile); outline-offset: 3px; }
 
+  .skip-link{
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--sauge-dark);
+    color: var(--blanc);
+    padding: 12px 20px;
+    border-radius: 0 0 8px 0;
+    z-index: 1000;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  .skip-link:focus{ left: 0; }
+
   /* ===== NAV ===== */
   .site-nav{
     position: sticky;
@@ -186,7 +213,7 @@
     display:none;
   }
   .nav-cta{
-    background: var(--sauge);
+    background: var(--sauge-dark);
     color: var(--blanc);
     text-decoration:none;
     padding: 10px 20px;
@@ -196,7 +223,7 @@
     transition: background 0.15s ease;
     white-space:nowrap;
   }
-  .nav-cta:hover{ background: var(--sauge-dark); }
+  .nav-cta:hover{ background: var(--sauge-darker); }
   .nav-toggle{
     display:none;
     background:none;
@@ -278,8 +305,8 @@
     cursor:pointer;
   }
   .btn:hover{ transform: translateY(-1px); }
-  .btn-primary{ background: var(--sauge); color: var(--blanc); }
-  .btn-primary:hover{ background: var(--sauge-dark); }
+  .btn-primary{ background: var(--sauge-dark); color: var(--blanc); }
+  .btn-primary:hover{ background: var(--sauge-darker); }
   .btn-outline{ background: transparent; color: var(--encre); border-color: rgba(51,48,42,0.35); }
   .btn-outline:hover{ border-color: var(--encre); }
 
@@ -304,13 +331,6 @@
     justify-content:center;
     box-shadow: var(--ombre);
   }
-  .photo-placeholder{
-    text-align:center;
-    color: var(--encre-soft);
-    font-size: 0.92rem;
-    padding: 20px;
-  }
-  .photo-placeholder svg{ width:46px; height:46px; margin: 0 auto 10px; opacity:0.55; }
 
   @media (max-width: 860px){
     .hero-inner{ grid-template-columns: 1fr; }
@@ -385,7 +405,7 @@
   /* ===== GALERIE ===== */
   .galerie-grid{
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 18px;
   }
   .galerie-item{
@@ -403,23 +423,8 @@
     font-size: 0.86rem;
     color: var(--encre-soft);
   }
-  @media (max-width: 760px){
-    .galerie-grid{ grid-template-columns: 1fr 1fr; }
-  }
-  @media (max-width: 460px){
-    .galerie-grid{ grid-template-columns: 1fr; }
-  }
 
   /* ===== JOURNEE TYPE ===== */
-  .journee-note{
-    display:inline-block;
-    background: var(--sable);
-    color: var(--encre-soft);
-    font-size: 0.85rem;
-    padding: 6px 14px;
-    border-radius: 999px;
-    margin-bottom: 30px;
-  }
   .timeline{ list-style:none; padding:0; margin:0; }
   .timeline li{
     display:grid;
@@ -675,6 +680,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#accueil">Aller au contenu principal</a>
 
 <nav class="site-nav">
   <div class="nav-inner">
@@ -776,15 +782,13 @@
   <div class="wrap reveal">
     <div class="section-head">
       <h2>Un environnement pensé pour les enfants</h2>
-      <p>Un espace du quotidien, aménagé pour que chaque enfant puisse jouer, se reposer et découvrir en toute sécurité. Les photos ci-dessous seront ajoutées prochainement.</p>
+      <p>Un espace du quotidien, aménagé pour que chaque enfant puisse jouer, se reposer et découvrir en toute sécurité.</p>
     </div>
     <div class="galerie-grid">
-      <div class="galerie-item" style="background:none; overflow:hidden;"><img src="images/espace-de-jeu.jpg" alt="Espace de jeu avec tapis et jouets d'éveil chez Audrey, assistante maternelle à Saint-Joseph" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="galerie-item"><span>[PHOTO ESPACE REPOS]</span></div>
-      <div class="galerie-item" style="background:none; overflow:hidden;"><img src="images/exterieur-jeux-eau.jpg" alt="Enfants jouant dehors avec des jeux d'eau dans le jardin d'Audrey à Saint-Joseph" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="galerie-item" style="background:none; overflow:hidden;"><img src="images/activites-creatives.jpg" alt="Enfants réalisant une activité créative autour de la table chez Audrey, assistante maternelle agréée" style="width:100%; height:100%; object-fit:cover;"></div>
-      <div class="galerie-item"><span>[PHOTO ESPACE REPAS]</span></div>
-      <div class="galerie-item" style="background:none; overflow:hidden;"><img src="images/environnement-general.jpg" alt="Coin d'éveil et de dessin dans l'espace d'accueil d'Audrey à Saint-Joseph" style="width:100%; height:100%; object-fit:cover;"></div>
+      <div class="galerie-item" style="background:none; overflow:hidden;"><img src="images/espace-de-jeu.jpg" alt="Espace de jeu avec tapis et jouets d'éveil chez Audrey, assistante maternelle à Saint-Joseph" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div>
+      <div class="galerie-item" style="background:none; overflow:hidden;"><img src="images/exterieur-jeux-eau.jpg" alt="Enfants jouant dehors avec des jeux d'eau dans le jardin d'Audrey à Saint-Joseph" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div>
+      <div class="galerie-item" style="background:none; overflow:hidden;"><img src="images/activites-creatives.jpg" alt="Enfants réalisant une activité créative autour de la table chez Audrey, assistante maternelle agréée" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div>
+      <div class="galerie-item" style="background:none; overflow:hidden;"><img src="images/environnement-general.jpg" alt="Coin d'éveil et de dessin dans l'espace d'accueil d'Audrey à Saint-Joseph" style="width:100%; height:100%; object-fit:cover;" loading="lazy"></div>
     </div>
     <div style="text-align:center; margin-top:34px;">
       <a class="btn btn-outline" href="galerie.html">Voir toutes les photos</a>
@@ -796,17 +800,15 @@
   <div class="wrap reveal">
     <div class="section-head">
       <h2>À quoi ressemble une journée d'accueil ?</h2>
-      <p class="journee-note">Exemple de journée type — à ajuster selon les horaires réels d'Audrey</p>
     </div>
     <ul class="timeline">
-      <li><time>08:00</time><p><strong>Arrivée et accueil</strong> — un moment calme pour se retrouver.</p></li>
-      <li><time>09:00</time><p><strong>Jeux et activités d'éveil</strong> — motricité, créativité, découverte.</p></li>
-      <li><time>10:30</time><p><strong>Sortie ou activité extérieure</strong> selon la météo et l'envie du jour.</p></li>
-      <li><time>11:30</time><p><strong>Repas</strong> — un temps convivial et adapté à chaque enfant.</p></li>
-      <li><time>12:30</time><p><strong>Temps calme et sieste</strong> — respect du rythme de sommeil de chacun.</p></li>
-      <li><time>15:00</time><p><strong>Réveil et goûter</strong> en douceur.</p></li>
-      <li><time>16:00</time><p><strong>Jeux et activités</strong> avant le retour des parents.</p></li>
-      <li><time>17:00</time><p><strong>Départ</strong> — un temps d'échange sur la journée de l'enfant.</p></li>
+      <li><time>Arrivée</time><p>Accueil calme et transmissions avec les parents.</p></li>
+      <li><time>Matin</time><p>Jeux et activités d'éveil : motricité, créativité, découverte.</p></li>
+      <li><time>Fin de matinée</time><p>Sortie ou activité extérieure, selon la météo et l'envie du jour.</p></li>
+      <li><time>Repas</time><p>Un temps convivial et adapté à chaque enfant.</p></li>
+      <li><time>Temps calme</time><p>Repos respectant le rythme de sommeil de chacun.</p></li>
+      <li><time>Après-midi</time><p>Réveil en douceur, goûter, puis jeux et activités.</p></li>
+      <li><time>Départ</time><p>Un temps d'échange avec les parents sur la journée de l'enfant.</p></li>
     </ul>
   </div>
 </section>
@@ -924,6 +926,16 @@
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">Quels sont les tarifs ?<span class="icon"></span></button>
         <div class="faq-a"><p>Contactez-moi pour en savoir plus : les tarifs sont définis ensemble selon le nombre d'heures et les besoins de votre famille.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Comment fonctionne le contact avec les parents ?<span class="icon"></span></button>
+        <div class="faq-a"><p>Je privilégie une communication régulière avec les familles, par téléphone ou WhatsApp, pour partager les moments clés de la journée de votre enfant.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Comment sont organisées les activités ?<span class="icon"></span></button>
+        <div class="faq-a"><p>Les activités sont adaptées à l'âge et au rythme de chaque enfant : jeux d'éveil, activités créatives et sensorielles, moments calmes, et sorties selon la météo.</p></div>
       </div>
 
     </div>

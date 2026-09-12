@@ -6,6 +6,7 @@
 <title>Galerie photos — Activités chez Audrey, assistante maternelle à Saint-Joseph</title>
 <meta name="description" content="Découvrez en photos les activités proposées par Audrey, assistante maternelle agréée à Saint-Joseph (La Réunion) : jeux d'éveil, bricolages, activités sensorielles et moments en extérieur.">
 <link rel="canonical" href="https://assistante-maternelle-saint-joseph.re/galerie.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%235E6E52'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='58' fill='%23FAF7F2' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Galerie photos — Activités chez Audrey, assistante maternelle à Saint-Joseph">
@@ -53,6 +54,13 @@
   img{ max-width:100%; display:block; }
   .wrap{ max-width: var(--container); margin:0 auto; padding: 0 28px; }
   :focus-visible{ outline: 3px solid var(--argile); outline-offset: 3px; }
+  .skip-link{
+    position: absolute; left: -9999px; top: 0;
+    background: var(--sauge-dark); color: var(--blanc);
+    padding: 12px 20px; border-radius: 0 0 8px 0;
+    z-index: 1000; text-decoration: none; font-size: 0.9rem;
+  }
+  .skip-link:focus{ left: 0; }
 
   .site-nav{
     position: sticky; top:0; z-index:100;
@@ -132,6 +140,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#contenu-galerie">Aller au contenu principal</a>
 
 <nav class="site-nav">
   <div class="nav-inner">
@@ -151,7 +160,7 @@
   <a href="index.html">Accueil</a> / Galerie
 </div>
 
-<header class="page-head">
+<header class="page-head" id="contenu-galerie">
   <div class="wrap">
     <h1>Les journées d'accueil, en images</h1>
     <p>Un aperçu des activités proposées aux enfants : jeux d'éveil, bricolages, découvertes sensorielles et moments en extérieur, dans l'espace d'accueil d'Audrey à Saint-Joseph.</p>
