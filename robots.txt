@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://assistante-maternelle-saint-joseph.re/sitemap.xml

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galerie photos — Activités chez Audrey, assistante maternelle à Saint-Joseph</title>
+<meta name="description" content="Découvrez en photos les activités proposées par Audrey, assistante maternelle agréée à Saint-Joseph (La Réunion) : jeux d'éveil, bricolages, activités sensorielles et moments en extérieur.">
+<link rel="canonical" href="https://assistante-maternelle-saint-joseph.re/galerie.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Galerie photos — Activités chez Audrey, assistante maternelle à Saint-Joseph">
+<meta property="og:description" content="Jeux d'éveil, bricolages et activités sensorielles : un aperçu en images des journées d'accueil chez Audrey, à Saint-Joseph.">
+<meta property="og:url" content="https://assistante-maternelle-saint-joseph.re/galerie.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://assistante-maternelle-saint-joseph.re/images/espace-accueil-audrey.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --blanc-casse: #FAF7F2;
+    --sable: #EFE6D8;
+    --sable-2: #E4D8C4;
+    --sauge: #7F9174;
+    --sauge-dark: #5E6E52;
+    --argile: #CC9484;
+    --encre: #33302A;
+    --encre-soft: #6B6357;
+    --blanc: #FFFFFF;
+    --font-titre: 'Cormorant Garamond', serif;
+    --font-texte: 'Jost', sans-serif;
+    --rayon: 6px;
+    --rayon-lg: 14px;
+    --ombre: 0 12px 30px -18px rgba(51,48,42,0.35);
+    --container: 1120px;
+  }
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--blanc-casse);
+    color: var(--encre);
+    font-family: var(--font-texte);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16.5px;
+  }
+  h1,h2{ font-family: var(--font-titre); font-weight:500; margin:0; color:var(--encre); line-height:1.18; }
+  p{ margin:0 0 1em; }
+  a{ color: inherit; }
+  img{ max-width:100%; display:block; }
+  .wrap{ max-width: var(--container); margin:0 auto; padding: 0 28px; }
+  :focus-visible{ outline: 3px solid var(--argile); outline-offset: 3px; }
+
+  .site-nav{
+    position: sticky; top:0; z-index:100;
+    background: rgba(250,247,242,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(51,48,42,0.08);
+  }
+  .nav-inner{
+    max-width: var(--container); margin:0 auto; padding: 16px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-brand{ font-family: var(--font-titre); font-size:1.35rem; text-decoration:none; }
+  .nav-links{ display:flex; gap:30px; list-style:none; margin:0; padding:0; }
+  .nav-links a{ text-decoration:none; font-size:0.94rem; color: var(--encre-soft); transition: color 0.15s ease; }
+  .nav-links a:hover, .nav-links a.active{ color: var(--sauge-dark); }
+  .nav-cta{
+    background: var(--sauge); color: var(--blanc); text-decoration:none;
+    padding: 10px 20px; border-radius: 999px; font-size:0.9rem; font-weight:500;
+    transition: background 0.15s ease; white-space:nowrap;
+  }
+  .nav-cta:hover{ background: var(--sauge-dark); }
+  @media (max-width: 700px){ .nav-links{ display:none; } }
+
+  .breadcrumb{
+    font-size: 0.85rem;
+    color: var(--encre-soft);
+    padding: 22px 0 0;
+  }
+  .breadcrumb a{ text-decoration:none; color: var(--sauge-dark); }
+
+  header.page-head{ padding: 30px 0 50px; text-align:left; }
+  header.page-head h1{ font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 14px; max-width: 20ch; }
+  header.page-head p{ color: var(--encre-soft); font-size: 1.05rem; max-width: 60ch; }
+
+  .galerie-full{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding-bottom: 70px;
+  }
+  .g-item{
+    border-radius: var(--rayon-lg);
+    overflow:hidden;
+    aspect-ratio: 4/3;
+    background: var(--sable);
+  }
+  .g-item img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform 0.3s ease; }
+  .g-item:hover img{ transform: scale(1.04); }
+
+  @media (max-width: 860px){ .galerie-full{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px){ .galerie-full{ grid-template-columns: 1fr; } }
+
+  .cta-bandeau{
+    background: var(--sauge-dark);
+    color: var(--blanc-casse);
+    text-align:center;
+    padding: 60px 0;
+  }
+  .cta-bandeau h2{ color: var(--blanc); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 14px; }
+  .cta-bandeau p{ color: rgba(250,247,242,0.85); max-width: 50ch; margin: 0 auto 26px; }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding: 13px 26px; border-radius: 999px; text-decoration:none;
+    font-weight:500; font-size:0.96rem; background: var(--blanc); color: var(--sauge-dark);
+    transition: background 0.15s ease;
+  }
+  .btn:hover{ background: var(--sable); }
+
+  footer{ padding: 40px 0 30px; border-top: 1px solid rgba(51,48,42,0.12); text-align:center; }
+  footer p{ color: var(--encre-soft); font-size: 0.85rem; margin:0; }
+  footer a{ color: var(--sauge-dark); text-decoration:none; font-weight:500; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    .g-item:hover img{ transform:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">Audrey</a>
+    <ul class="nav-links">
+      <li><a href="index.html#a-propos">Mon accueil</a></li>
+      <li><a href="galerie.html" class="active">Galerie</a></li>
+      <li><a href="index.html#disponibilites">Disponibilités</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="index.html#contact">Me contacter</a>
+  </div>
+</nav>
+
+<div class="wrap breadcrumb">
+  <a href="index.html">Accueil</a> / Galerie
+</div>
+
+<header class="page-head">
+  <div class="wrap">
+    <h1>Les journées d'accueil, en images</h1>
+    <p>Un aperçu des activités proposées aux enfants : jeux d'éveil, bricolages, découvertes sensorielles et moments en extérieur, dans l'espace d'accueil d'Audrey à Saint-Joseph.</p>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="galerie-full">
+    <div class="g-item"><img src="images/espace-accueil-audrey.jpg" alt="Enfants installés autour de la table dans l'espace d'accueil lumineux d'Audrey, assistante maternelle à Saint-Joseph" loading="lazy"></div>
+    <div class="g-item"><img src="images/espace-de-jeu.jpg" alt="Espace de jeu avec tapis et jouets d'éveil chez Audrey, assistante maternelle à Saint-Joseph" loading="lazy"></div>
+    <div class="g-item"><img src="images/exterieur-jeux-eau.jpg" alt="Enfants jouant dehors avec des jeux d'eau dans le jardin d'Audrey à Saint-Joseph" loading="lazy"></div>
+    <div class="g-item"><img src="images/activites-creatives.jpg" alt="Enfants réalisant une activité créative autour de la table chez Audrey, assistante maternelle agréée" loading="lazy"></div>
+    <div class="g-item"><img src="images/environnement-general.jpg" alt="Coin d'éveil et de dessin dans l'espace d'accueil d'Audrey à Saint-Joseph" loading="lazy"></div>
+    <div class="g-item"><img src="images/activite-pliage-papier.jpg" alt="Enfant faisant une activité de pliage de papier coloré chez l'assistante maternelle" loading="lazy"></div>
+    <div class="g-item"><img src="images/activite-gommettes.jpg" alt="Enfant collant des gommettes lors d'une activité manuelle" loading="lazy"></div>
+    <div class="g-item"><img src="images/activite-baton-glace-exterieur.jpg" alt="Bricolage en extérieur avec des bâtonnets chez Audrey, assistante maternelle à Saint-Joseph" loading="lazy"></div>
+    <div class="g-item"><img src="images/bricolage-lapin-gobelet.jpg" alt="Bricolage d'un lapin en gobelet, activité manuelle pour jeunes enfants" loading="lazy"></div>
+    <div class="g-item"><img src="images/eveil-pate-a-modeler.jpg" alt="Enfant manipulant de la pâte à modeler pour une activité d'éveil sensoriel" loading="lazy"></div>
+    <div class="g-item"><img src="images/jeu-formes-geometriques.jpg" alt="Enfant apprenant à reconnaître les formes géométriques lors d'une activité éducative" loading="lazy"></div>
+    <div class="g-item"><img src="images/bricolage-fleurs-crayons.jpg" alt="Bricolage de fleurs en crayons et feutrine, activité créative pour enfants" loading="lazy"></div>
+    <div class="g-item"><img src="images/bricolage-maison-batonnets.jpg" alt="Bricolage d'une maisonnette en bâtonnets, activité manuelle chez l'assistante maternelle" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="cta-bandeau">
+  <div class="wrap">
+    <h2>Envie d'en savoir plus sur mon accueil ?</h2>
+    <p>Je serais ravie d'échanger avec vous sur votre projet d'accueil à Saint-Joseph.</p>
+    <a class="btn" href="index.html#contact">Me contacter</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© <span id="year"></span> Audrey — Assistante maternelle agréée, Saint-Joseph, La Réunion · <a href="index.html">Retour à l'accueil</a></p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
