@@ -131,6 +131,21 @@
 
   footer{ padding: 40px 0 30px; border-top: 1px solid rgba(51,48,42,0.12); text-align:center; }
   footer p{ color: var(--encre-soft); font-size: 0.85rem; margin:0; }
+  .footer-credit{
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(51,48,42,0.1);
+    display:flex;
+    justify-content:center;
+  }
+  .footer-credit img{
+    height: 32px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+    border-radius: 4px;
+  }
+  .footer-credit a:hover img{ opacity: 1; }
   footer a{ color: var(--sauge-dark); text-decoration:none; font-weight:500; }
 
   @media (prefers-reduced-motion: reduce){
@@ -196,6 +211,11 @@
 <footer>
   <div class="wrap">
     <p>© <span id="year"></span> Audrey — Assistante maternelle agréée, Saint-Joseph, La Réunion · <a href="index.html">Retour à l'accueil</a></p>
+    <div class="footer-credit">
+      <a href="https://www.pita-ia.re" target="_blank" rel="noopener" aria-label="Site réalisé par Pita IA">
+        <img src="images/logo-pita-ia.png" alt="Logo Pita IA" width="320" height="268" loading="lazy">
+      </a>
+    </div>
   </div>
 </footer>
 

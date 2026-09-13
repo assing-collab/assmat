@@ -648,6 +648,21 @@
   .footer-links{ list-style:none; display:flex; gap:22px; flex-wrap:wrap; padding:0; margin:0; }
   .footer-links a{ text-decoration:none; color: var(--encre-soft); font-size: 0.9rem; }
   .footer-legal{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size: 0.82rem; color: var(--encre-soft); }
+  .footer-credit{
+    margin-top: 26px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(51,48,42,0.1);
+    display:flex;
+    justify-content:center;
+  }
+  .footer-credit img{
+    height: 32px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+    border-radius: 4px;
+  }
+  .footer-credit a:hover img{ opacity: 1; }
   .footer-legal a{ text-decoration:none; color: var(--encre-soft); }
 
   /* ===== WHATSAPP FLOTTANT ===== */
@@ -1043,6 +1058,11 @@
     <div class="footer-legal">
       <span>© <span id="year"></span> Audrey — Tous droits réservés</span>
       <span><a href="#">Mentions légales</a> · <a href="#">Politique de confidentialité</a></span>
+    </div>
+    <div class="footer-credit">
+      <a href="https://www.pita-ia.re" target="_blank" rel="noopener" aria-label="Site réalisé par Pita IA">
+        <img src="images/logo-pita-ia.png" alt="Logo Pita IA" width="320" height="268" loading="lazy">
+      </a>
     </div>
   </div>
 </footer>
